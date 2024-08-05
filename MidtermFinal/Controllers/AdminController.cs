@@ -72,5 +72,38 @@ namespace MidtermFinal.Controllers
         }
 
 
+
+        // Sample data for demonstration
+        private static List<Establishment> GetSampleEstablishments()
+        {
+            return new List<Establishment>
+            {
+                new Establishment { Id = 1, Title = "Hotel ABC", Description = "A luxurious hotel in the city center.", ImageUrl = "https://via.placeholder.com/150" },
+                new Establishment { Id = 2, Title = "Resort XYZ", Description = "A beautiful resort by the beach.", ImageUrl = "https://via.placeholder.com/150" },
+                // Add more establishments as needed
+            };
+        }
+
+        public IActionResult ApproveEstablishments()
+        {
+            var establishments = GetSampleEstablishments();
+            return View(establishments);
+        }
+
+        [HttpPost]
+        public IActionResult ApproveEstablishment(int id)
+        {
+            // Logic to approve establishment
+            // Remove establishment from the pending list and move to approved list
+            return RedirectToAction("ApproveEstablishments");
+        }
+
+        [HttpPost]
+        public IActionResult DeclineEstablishment(int id)
+        {
+            // Logic to decline establishment
+            // Remove establishment from the pending list
+            return RedirectToAction("ApproveEstablishments");
+        }
     }
 }
