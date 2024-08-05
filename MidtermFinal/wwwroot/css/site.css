@@ -1,0 +1,39 @@
+body {
+    background-color: #538392;
+    color: #538392;
+}
+
+.card {
+    background-color: #80B9AD;
+}
+
+.card h5 {
+    color: #538392;
+}
+
+.btn-primary {
+    background-color: #6295A2;
+    border-color: #6295A2;
+}
+
+.nav-link {
+    color: #538392;
+}
+
+.nav-link:hover {
+    color: #B3E2A7;
+}
+
+header {
+    background-color: #80B9AD;
+    padding: 10px 20px;
+}
+
+.jumbotron {
+    background-color: #B3E2A7;
+    color: #538392;
+}
+
+.jumbotron hr {
+    border-color: #538392;
+}

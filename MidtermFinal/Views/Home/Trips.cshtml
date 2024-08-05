@@ -1,0 +1,168 @@
+﻿@{
+    ViewData["Title"] = "Trips";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trips - Barrier Busters Philippines</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        .navbar-custom {
+            background-color: #538392;
+        }
+
+            .navbar-custom .navbar-brand,
+            .navbar-custom .nav-link {
+                color: #B3E2A7;
+            }
+
+            .navbar-custom .btn-primary {
+                background-color: #6295A2;
+                border-color: #6295A2;
+            }
+
+        .trips-section {
+            padding: 50px 0;
+        }
+
+            .trips-section .card {
+                border: none;
+                border-radius: 10px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+                .trips-section .card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+                }
+
+                .trips-section .card img {
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    height: 200px;
+                    object-fit: cover;
+                }
+
+            .trips-section .card-title {
+                color: #538392;
+                font-size: 1.25rem;
+                margin-bottom: 10px;
+            }
+
+            .trips-section .card-text {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+
+            .trips-section .btn-rate {
+                background-color: #6295A2;
+                border-color: #6295A2;
+                transition: background-color 0.3s ease;
+            }
+
+                .trips-section .btn-rate:hover {
+                    background-color: #507780;
+                    border-color: #507780;
+                }
+
+        .footer {
+            background-color: #538392;
+            color: #B3E2A7;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand font-weight-bold" href="#">Barrier Busters Philippines</a>
+        <div class="collapse navbar-collapse justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/Home/Index">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Home/Trips">Trips</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Home/Contact">Contact</a></li>
+            </ul>
+        </div>
+        <a class="btn btn-primary ml-auto" href="/Home/Signup">Sign Up</a>
+    </nav>
+
+    <div class="container trips-section">
+        <h1 class="text-center mb-5" style="color: #538392;">Our Trips</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Trip 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Trip Title 1</h5>
+                        <p class="card-text">Experience the beauty of nature with our exclusive trips to stunning destinations. Adventure awaits!</p>
+                        <a href="#" class="btn btn-rate">Rate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Trip 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Trip Title 2</h5>
+                        <p class="card-text">Adventure awaits! Join us for an unforgettable experience filled with excitement.</p>
+                        <a href="#" class="btn btn-rate">Rate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Trip 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Trip Title 3</h5>
+                        <p class="card-text">Discover hidden gems and enjoy the serenity of untouched landscapes with our special tours.</p>
+                        <a href="#" class="btn btn-rate">Rate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Trip 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Trip Title 4</h5>
+                        <p class="card-text">Join us for a journey of a lifetime, exploring the most breathtaking places on earth.</p>
+                        <a href="#" class="btn btn-rate">Rate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Trip 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Trip Title 5</h5>
+                        <p class="card-text">Unwind and relax with our carefully curated trips to peaceful and picturesque locations.</p>
+                        <a href="#" class="btn btn-rate">Rate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Trip 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Trip Title 6</h5>
+                        <p class="card-text">Experience local culture and traditions with our immersive trips to unique destinations.</p>
+                        <a href="#" class="btn btn-rate">Rate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Barrier Busters Philippines. All rights reserved.</p>
+    </div>
+</body>
+</html>

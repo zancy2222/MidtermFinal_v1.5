@@ -1,0 +1,153 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Barrier Busters Philippines</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            background-color: #538392;
+            color: #B3E2A7;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+            .sidebar h2 {
+                color: #ffffff;
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
+
+            .sidebar .nav-link {
+                color: #B3E2A7;
+                font-weight: bold;
+                margin-bottom: 10px;
+                display: block;
+                font-size: 1.1rem;
+            }
+
+                .sidebar .nav-link:hover {
+                    color: #ffffff;
+                    background-color: #6295A2;
+                    border-radius: 5px;
+                }
+
+            .sidebar .logout {
+                margin-top: 20px;
+                font-weight: bold;
+                color: #ff6b6b;
+            }
+
+        .content {
+            margin-left: 250px; /* Ensure content starts after the sidebar */
+            padding: 20px;
+        }
+
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background-color: #6295A2;
+            color: #ffffff;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+            .card-body h3 {
+                font-size: 2rem;
+                margin: 0;
+            }
+
+            .card-body p {
+                font-size: 1.1rem;
+            }
+
+        .footer {
+            background-color: #538392;
+            color: #B3E2A7;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: calc(100% - 250px); /* Ensure footer is aligned correctly */
+            bottom: 0;
+            left: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="text-center">Admin Dashboard</h2>
+        <nav class="nav flex-column">
+            <a class="nav-link" href="/Admin/Users">Users <i class="fas fa-users"></i></a>
+            <a class="nav-link" href="/Admin/ApproveEstablishments">Approve Establishments <i class="fas fa-check"></i></a>
+            <a class="nav-link" href="/Admin/EstablishmentUsers">Establishment Users <i class="fas fa-store"></i></a>
+            <a class="nav-link logout" href="/Home/Login">Logout <i class="fas fa-sign-out-alt"></i></a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="container-fluid">
+            <h1 class="mb-4">Dashboard Overview</h1>
+
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-header">Total Users</div>
+                        <div class="card-body">
+                            <h3 class="card-title">1,234</h3>
+                            <p class="card-text">Total number of registered users.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-header">Total Trips</div>
+                        <div class="card-body">
+                            <h3 class="card-title">567</h3>
+                            <p class="card-text">Total number of trips booked.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-header">Feedback</div>
+                        <div class="card-body">
+                            <h3 class="card-title">120</h3>
+                            <p class="card-text">Total feedback received from users.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Barrier Busters Philippines. All rights reserved.</p>
+    </div>
+</body>
+</html>

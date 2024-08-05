@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="d-flex justify-content-center align-items-center vh-100" style="background-color: #538392;">
+    <div class="card p-4" style="width: 400px; background-color: #80B9AD;">
+        <h2 class="text-center mb-4" style="color: #B3E2A7;">Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">Enter Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Email" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" required />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" style="background-color: #6295A2; border-color: #6295A2;">Login</button>
+        </form>
+        <div class="text-center mt-3">
+            <p>Don't have an account? <a href="/Home/Signup" style="color: #B3E2A7;">Click here to register.</a></p>
+        </div>
+    </div>
+</div>

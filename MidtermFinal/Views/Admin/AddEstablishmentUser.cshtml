@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "Add Establishment User";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            background-color: #538392;
+            color: #B3E2A7;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+            .sidebar h2 {
+                color: #ffffff;
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
+
+            .sidebar .nav-link {
+                color: #B3E2A7;
+                font-weight: bold;
+                margin-bottom: 10px;
+                display: block;
+                font-size: 1.1rem;
+            }
+
+                .sidebar .nav-link:hover {
+                    color: #ffffff;
+                    background-color: #6295A2;
+                    border-radius: 5px;
+                }
+
+            .sidebar .logout {
+                margin-top: 20px;
+                font-weight: bold;
+                color: #ff6b6b;
+            }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #6295A2;
+            border-color: #6295A2;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: #507780;
+                border-color: #507780;
+            }
+
+        .footer {
+            background-color: #538392;
+            color: #B3E2A7;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: calc(100% - 250px);
+            bottom: 0;
+            left: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="text-center">Admin Dashboard</h2>
+        <nav class="nav flex-column">
+            <a class="nav-link" href="/Admin/Users">Users <i class="fas fa-users"></i></a>
+            <a class="nav-link" href="/Admin/ApproveEstablishments">Approve Establishments <i class="fas fa-check"></i></a>
+            <a class="nav-link" href="/Admin/EstablishmentUsers">Establishment Users <i class="fas fa-store"></i></a>
+            <a class="nav-link logout" href="/Home/Login">Logout <i class="fas fa-sign-out-alt"></i></a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="container-fluid">
+            <h1 class="mb-4">Add Establishment User</h1>
+
+            <form method="post" action="/Admin/AddEstablishmentUser">
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select class="form-control" id="role" name="role" required>
+                        <option value="EstablishmentUser">Establishment User</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required />
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required />
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact No.</label>
+                    <input type="text" class="form-control" id="contact" name="contact" placeholder="Enter contact number" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Add User</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Barrier Busters Philippines. All rights reserved.</p>
+    </div>
+</body>
+</html>
