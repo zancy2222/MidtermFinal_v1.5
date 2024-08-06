@@ -1,0 +1,133 @@
+﻿@{
+    ViewData["Title"] = "Upload Establishments";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Barrier Busters Philippines</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-custom {
+            background-color: #538392;
+        }
+
+            .navbar-custom .navbar-brand,
+            .navbar-custom .nav-link {
+                color: #B3E2A7;
+            }
+
+            .navbar-custom .btn-primary {
+                background-color: #6295A2;
+                border-color: #6295A2;
+            }
+
+                .navbar-custom .btn-primary:hover {
+                    background-color: #507780;
+                    border-color: #507780;
+                }
+
+        .form-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 70px); /* Adjust height based on navbar size */
+            background-color: #e8f0f4;
+            padding: 20px;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+            .form-container h2 {
+                color: #538392;
+                margin-bottom: 20px;
+                font-size: 1.75rem;
+            }
+
+            .form-container .form-group label {
+                font-weight: bold;
+            }
+
+            .form-container .form-control {
+                border-radius: 4px;
+            }
+
+            .form-container .btn-primary {
+                background-color: #6295A2;
+                border-color: #6295A2;
+                width: 100%;
+                border-radius: 4px;
+                padding: 10px;
+            }
+
+                .form-container .btn-primary:hover {
+                    background-color: #507780;
+                    border-color: #507780;
+                }
+
+        .footer {
+            background-color: #538392;
+            color: #B3E2A7;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <a class="navbar-brand font-weight-bold" href="#">Barrier Busters Philippines</a>
+        <div class="collapse navbar-collapse justify-content-center">
+
+        </div>
+        <a class="btn btn-primary ml-auto" href="/Home/Login">Logout</a>
+    </nav>
+
+    <div class="form-section">
+        <div class="form-container">
+            <h2 class="text-center">Upload Establishment</h2>
+            <form asp-action="UploadDetails" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="image">Upload Image</label>
+                    <input type="file" class="form-control-file" id="image" name="Image" required />
+                </div>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="Title" placeholder="Enter Title" required />
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" name="Description" rows="5" placeholder="Enter Description" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Barrier Busters Philippines. All rights reserved.</p>
+    </div>
+</body>
+</html>

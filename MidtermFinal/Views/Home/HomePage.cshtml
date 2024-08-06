@@ -30,6 +30,17 @@
                 border-color: #6295A2;
             }
 
+        .hero-section {
+            background: url('/images/bgg.gif') no-repeat center center;
+            background-size: cover;
+            height: 600px;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
             .hero-section h1 {
                 font-size: 3rem;
                 font-weight: bold;
@@ -88,54 +99,33 @@
         <a class="btn btn-primary ml-auto" href="/Home/Signup">Sign Up</a>
     </nav>
 
-    @{
-        ViewData["Title"] = "Sign Up";
-    }
+    <div class="hero-section">
+        <h1>Welcome to Barrier Busters Philippines</h1>
+        <p>Discover amazing travel experiences with us</p>
+    </div>
 
-    <div class="d-flex justify-content-center align-items-center vh-100" style="background-color: #538392;">
-        <div class="card p-4" style="width: 400px; background-color: #80B9AD;">
-            <h2 class="text-center mb-4" style="color: #B3E2A7;">Sign Up</h2>
-            <form enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="email">Enter Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter Email" required />
-                </div>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Name" required />
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password" required />
-                </div>
-                <div class="form-group">
-                    <label for="repassword">Re-Enter Password</label>
-                    <input type="password" class="form-control" id="repassword" placeholder="Re-Enter Password" required />
-                </div>
-                <div class="form-group">
-                    <label for="contact">Contact No.</label>
-                    <input type="text" class="form-control" id="contact" placeholder="Contact No." required />
-                </div>
-                <div class="form-group">
-                    <label for="disability">Disability</label>
-                    <input type="text" class="form-control" id="disability" placeholder="Disability" />
-                </div>
-                <div class="form-group">
-                    <label for="profileImage">Profile Image</label>
-                    <input type="file" class="form-control-file" id="profileImage" />
-                </div>
-                <button type="submit" class="btn btn-primary btn-block" style="background-color: #6295A2; border-color: #6295A2;">Sign Up</button>
-            </form>
-            <div class="text-center mt-3">
-                <p>Already have an account? <a href="/Home/Login" style="color: #B3E2A7;">Click here to login.</a></p>
+    <div class="container content-section">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/350x250" class="img-fluid mb-3" alt="Exciting Trips">
+                <h2>Exciting Trips</h2>
+                <p>Explore a variety of travel destinations tailored to your preferences. From mountains to beaches, we have it all.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/350x250" class="img-fluid mb-3" alt="Adventure Awaits">
+                <h2>Adventure Awaits</h2>
+                <p>Join our adventure tours and experience the thrill of outdoor activities. Perfect for adventure enthusiasts.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/350x250" class="img-fluid mb-3" alt="Discover New Places">
+                <h2>Discover New Places</h2>
+                <p>Discover hidden gems and local secrets. Our guides will take you to places you never knew existed.</p>
             </div>
         </div>
     </div>
-
 
     <div class="footer">
         <p>&copy; 2024 Barrier Busters Philippines. All rights reserved.</p>
     </div>
 </body>
 </html>
-

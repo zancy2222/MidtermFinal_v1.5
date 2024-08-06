@@ -20,6 +20,13 @@ namespace MidtermFinal.Controllers
         }
 
         [HttpGet]
+        public IActionResult HomePage()
+        {
+            return View();
+        }
+
+
+        [HttpGet]
         public IActionResult Login()
         {
             return View();
