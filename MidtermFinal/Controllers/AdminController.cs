@@ -1,10 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MidtermFinal.Data;
 using MidtermFinal.Models;
 
 namespace MidtermFinal.Controllers
 {
     public class AdminController : Controller
     {
+        private readonly MidtermFinalDbContext _context;
+
+        public AdminController(MidtermFinalDbContext context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -45,7 +53,7 @@ namespace MidtermFinal.Controllers
         }
 
         // This action can be used for adding establishment users
-        public IActionResult AddEstablishmentUser()
+        public IActionResult AddUser()
         {
             // Implement the logic for adding a new establishment user
             return View();
@@ -53,15 +61,13 @@ namespace MidtermFinal.Controllers
 
         // POST: Admin/AddEstablishmentUser
         [HttpPost]
-        public IActionResult AddEstablishmentUser(EstablishmentUser newUser)
+        public async Task<IActionResult> AddUser(User newUser)
         {
             if (ModelState.IsValid)
             {
                 // Add the new user to the data source
-                var users = GetSampleEstablishmentUsers();
-                newUser.Id = users.Count + 1;
-                newUser.RegisteredOn = DateTime.Now;
-                users.Add(newUser);
+                _context.Users.Add(newUser);
+                await _context.SaveChangesAsync();
 
                 // Redirect to the EstablishmentUsers page
                 return RedirectToAction("EstablishmentUsers");

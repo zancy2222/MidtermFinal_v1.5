@@ -1,13 +1,22 @@
+using Microsoft.EntityFrameworkCore;
+using MidtermFinal.Data;
+
 namespace MidtermFinal
 {
     public class Program
     {
         public static void Main(string[] args)
         {
+            
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            var connectionString = builder.Configuration.GetConnectionString("MidtermFinalConnectionString");
+
+            builder.Services.AddDbContext<MidtermFinalDbContext>(options => 
+                options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
             var app = builder.Build();
 
@@ -32,5 +41,6 @@ namespace MidtermFinal
 
             app.Run();
         }
+
     }
 }
