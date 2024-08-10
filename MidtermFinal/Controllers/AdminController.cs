@@ -48,8 +48,8 @@ namespace MidtermFinal.Controllers
 
         public IActionResult EstablishmentUsers()
         {
-            var users = GetSampleEstablishmentUsers();
-            return View(users);
+            var establishmentUsers = _context.EstablishmentUsers.ToList();
+            return View(establishmentUsers);
         }
 
         // This action can be used for adding establishment users
@@ -82,6 +82,8 @@ namespace MidtermFinal.Controllers
         // Sample data for demonstration
         private static List<Establishment> GetSampleEstablishments()
         {
+
+
             return new List<Establishment>
             {
                 new Establishment { Id = 1, Title = "Hotel ABC", Description = "A luxurious hotel in the city center.", ImageUrl = "https://via.placeholder.com/150" },

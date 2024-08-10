@@ -12,7 +12,7 @@ using MidtermFinal.Data;
 namespace MidtermFinal.Migrations
 {
     [DbContext(typeof(MidtermFinalDbContext))]
-    [Migration("20240809133453_EstablishmentUser")]
+    [Migration("20240809184521_EstablishmentUser")]
     partial class EstablishmentUser
     {
         /// <inheritdoc />
@@ -49,6 +49,10 @@ namespace MidtermFinal.Migrations
                         .IsRequired()
                         .HasMaxLength(128)
                         .HasColumnType("varchar(128)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<DateTime>("RegisteredOn")
                         .HasColumnType("datetime(6)");

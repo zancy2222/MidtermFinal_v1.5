@@ -1,4 +1,5 @@
-﻿@{
+﻿@model EstablishmentUser;
+@{
     ViewData["Title"] = "Landing Page";
 }
 
@@ -95,37 +96,38 @@
     <div class="d-flex justify-content-center align-items-center vh-100" style="background-color: #538392;">
         <div class="card p-4" style="width: 400px; background-color: #80B9AD;">
             <h2 class="text-center mb-4" style="color: #B3E2A7;">Sign Up</h2>
-            <form enctype="multipart/form-data">
+            <form asp-action="Signup" enctype="multipart/form-data" method="post">
                 <div class="form-group">
                     <label for="email">Enter Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter Email" required />
+                    <input type="email" class="form-control" id="email" name="email" required />
                 </div>
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Name" required />
+                    <input type="text" class="form-control" id="name" name="name" required />
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password" required />
+                    <input type="password" class="form-control" id="password" name="password" required />
                 </div>
                 <div class="form-group">
                     <label for="repassword">Re-Enter Password</label>
-                    <input type="password" class="form-control" id="repassword" placeholder="Re-Enter Password" required />
+                    <input type="password" class="form-control" id="repassword" name="repassword" required />
                 </div>
                 <div class="form-group">
                     <label for="contact">Contact No.</label>
-                    <input type="text" class="form-control" id="contact" placeholder="Contact No." required />
+                    <input type="text" class="form-control" id="contact" name="contact" required />
                 </div>
                 <div class="form-group">
                     <label for="disability">Disability</label>
-                    <input type="text" class="form-control" id="disability" placeholder="Disability" />
+                    <input type="text" class="form-control" id="disability" name="disability" />
                 </div>
                 <div class="form-group">
                     <label for="profileImage">Profile Image</label>
-                    <input type="file" class="form-control-file" id="profileImage" />
+                    <input type="file" class="form-control-file" id="profileImage" name="profileImage" />
                 </div>
-                <button type="submit" class="btn btn-primary btn-block" style="background-color: #6295A2; border-color: #6295A2;">Sign Up</button>
+                <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
             </form>
+
             <div class="text-center mt-3">
                 <p>Already have an account? <a href="/Home/Login" style="color: #B3E2A7;">Click here to login.</a></p>
             </div>

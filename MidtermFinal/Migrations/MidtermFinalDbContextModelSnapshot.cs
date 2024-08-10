@@ -47,6 +47,10 @@ namespace MidtermFinal.Migrations
                         .HasMaxLength(128)
                         .HasColumnType("varchar(128)");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<DateTime>("RegisteredOn")
                         .HasColumnType("datetime(6)");
 
